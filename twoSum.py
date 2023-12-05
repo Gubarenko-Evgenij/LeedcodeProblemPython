@@ -18,5 +18,5 @@ class Solution:
                 if nums[i + 1:].count(temp):
                     return [i, nums.index(temp, i + 1)]
             return [0, 0]
-        except():
-            raise ValueError("Что-то пошло не так")
+        except Exception as er:
+            raise ValueError(er.__doc__+" Проверьте правильность вводимых параметров")
